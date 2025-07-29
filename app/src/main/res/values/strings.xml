@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">VIT Finance Tracker</string>
     <string name="login">Login</string>
-    <string name="signup">SignUP</string>
-    <string name="signin">SignIn</string>
+    <string name="signup">Sign UP</string>
+    <string name="signin">Sign In</string>
+    <string name="default_web_client_id">add your web client id</string>
 </resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "431655886928",
+    "project_id": "vit-finance-tracker",
+    "storage_bucket": "vit-finance-tracker.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431655886928:android:3976e2b72d284131c0f155",
+        "android_client_info": {
+          "package_name": "com.example.vitfinancetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431655886928-mvh74anjl1bvjbfjnnpbjfnl4iivs5s1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vitfinancetracker",
+            "certificate_hash": "60f550febcc7f0cc6561f056c4d03064f828e123"
+          }
+        },
+        {
+          "client_id": "431655886928-hp1rdfahumfjibh0kusmlqhmkovtefo1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzA4T-BgtHbRIekPzLmvRPZkI652KECao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431655886928-hp1rdfahumfjibh0kusmlqhmkovtefo1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.vitfinancetracker" />
+                  <option name="mobileSdkAppId" value="1:431655886928:android:3976e2b72d284131c0f155" />
+                  <option name="projectId" value="vit-finance-tracker" />
+                  <option name="projectNumber" value="431655886928" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

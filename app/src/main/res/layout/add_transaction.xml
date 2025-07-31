@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C1C"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Item Bought -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item Bought"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/itemInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter item name"
+            android:background="@drawable/bg_light_box"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:paddingStart="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Vendor Name -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vendor Name"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/vendorInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter vendor name"
+            android:background="@drawable/bg_light_box"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:paddingStart="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Category -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_light_box"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:spinnerMode="dropdown" />
+
+        <!-- Amount -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/moneyInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="₹0.00"
+            android:inputType="numberDecimal"
+            android:background="@drawable/bg_light_box"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:paddingStart="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Date -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/dateInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Select date"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@drawable/bg_light_box"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:paddingStart="16dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Save"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#416578"
+            android:layout_gravity="end"
+            android:paddingHorizontal="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>

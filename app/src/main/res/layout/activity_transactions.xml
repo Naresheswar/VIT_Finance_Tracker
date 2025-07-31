@@ -1,161 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transactionLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#1C1C1C"
-    android:padding="0dp">
+    android:background="#1E1E1E"
+    >
 
-    <!-- Top Bar -->
+    <!-- Search Bar -->
     <LinearLayout
+        android:id="@+id/searchBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#48596B"
-        android:gravity="center_vertical"
+        android:layout_height="48dp"
+        android:layout_margin="12dp"
         android:orientation="horizontal"
-        android:padding="20dp"
-        android:weightSum="1">
+        android:padding="8dp"
+        android:background="@drawable/bg_light_box"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.8"
-            android:padding="8dp"
-            android:text="Good Afternoon!\nGuest User"
-            android:textColor="#FFFFFF"
-            android:textSize="19sp"
-            android:textStyle="bold" />
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:text="⌕"
+            android:layout_marginBottom="5dp"
+            android:textSize="26sp"
+            android:tint="#444" />
 
-        <ImageView
+        <EditText
+            android:id="@+id/searchInput"
             android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.2"
-            android:src="@drawable/ic_person"
-            app:tint="#FFFFFF" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Search"
+            android:textColor="#000"
+            android:textColorHint="#888"
+            android:paddingStart="8dp" />
+
+        <Button
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:hint="✖"
+            android:textColor="@color/black"
+            android:backgroundTint="#000000"
+            android:contentDescription="Clear"
+            />
     </LinearLayout>
 
-    <!-- Income & Spending Cards -->
-    <LinearLayout
+    <!-- RecyclerView for transactions -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transactionsRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="16dp">
-
-        <LinearLayout
-            android:layout_width="220dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/rounded_card"
-            android:backgroundTint="#C7D9E5"
-            android:clipToPadding="false"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="12dp">
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="12dp"
-                android:background="@drawable/circle_background"
-                android:gravity="center"
-                android:text="↓"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/incomeText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Income\n₹0.00"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="220dp"
-            android:layout_height="60dp"
-            android:background="@drawable/rounded_card"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:gravity="center_vertical"
-            android:layout_gravity="center"
-            android:clipToPadding="false">
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="↑"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:background="@drawable/circle_background"
-                android:textColor="#FFFFFF"
-                android:layout_marginEnd="12dp" />
-
-            <TextView
-                android:id="@+id/spendingText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Spending\n₹0.00"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                android:textSize="16sp" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <!-- Balance Bar -->
-    <TextView
-        android:id="@+id/balanceText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#D9D9D9"
+        android:layout_height="0dp"
+        android:layout_above="@id/bottomNavBar"
+        android:layout_below="@id/searchBar"
         android:padding="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:text="Balance : ₹0.00"
-        android:textColor="#000000"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:clipToPadding="false" />
 
-    <!-- Transaction List -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_weight="1"
-        android:contentDescription="Transaction list"
-        android:fillViewport="true"
-        android:padding="8dp">
 
-        <LinearLayout
-            android:id="@+id/transactionList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:orientation="vertical"
-            android:padding="8dp" />
-    </ScrollView>
-
-    <!-- Bottom Navigation Bar -->
+    <!-- Bottom Navigation -->
     <LinearLayout
         android:id="@+id/bottomNavBar"
         android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:background="#D9D9D9"
         android:weightSum="5">
 
-        <!-- Home -->
         <LinearLayout
             android:id="@+id/homeButton"
             android:layout_width="0dp"
@@ -172,6 +85,7 @@
                 android:layout_width="34dp"
                 android:layout_height="34dp"
                 android:src="@drawable/ic_home"
+
                 android:duplicateParentState="true" />
 
             <TextView
@@ -181,11 +95,10 @@
                 android:text="Home"
                 android:textStyle="bold"
                 android:textSize="12sp"
-                android:textColor="#C7D9E5"
+
                 android:duplicateParentState="true" />
         </LinearLayout>
 
-        <!-- Transactions -->
         <LinearLayout
             android:id="@+id/transactionsButton"
             android:layout_width="0dp"
@@ -193,6 +106,7 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center"
+
             android:clickable="true"
             android:focusable="true"
             android:duplicateParentState="true">
@@ -211,11 +125,8 @@
                 android:text="Transactions"
                 android:textStyle="bold"
                 android:textSize="12sp"
-                android:textColor="#C7D9E5"
                 android:duplicateParentState="true" />
         </LinearLayout>
-
-        <!-- Add -->
         <LinearLayout
             android:id="@+id/addButton"
             android:layout_width="0dp"
@@ -223,6 +134,7 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center"
+
             android:clickable="true"
             android:focusable="true"
             android:duplicateParentState="true">
@@ -232,6 +144,7 @@
                 android:layout_width="34dp"
                 android:layout_height="34dp"
                 android:src="@drawable/ic_add"
+
                 android:duplicateParentState="true" />
 
             <TextView
@@ -242,11 +155,11 @@
                 android:textStyle="bold"
                 android:gravity="center"
                 android:textSize="12sp"
-                android:textColor="#C7D9E5"
+
                 android:duplicateParentState="true" />
         </LinearLayout>
 
-        <!-- Analysis -->
+
         <LinearLayout
             android:id="@+id/analysisButton"
             android:layout_width="0dp"
@@ -254,6 +167,7 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center"
+
             android:clickable="true"
             android:focusable="true"
             android:duplicateParentState="true">
@@ -263,6 +177,7 @@
                 android:layout_width="34dp"
                 android:layout_height="34dp"
                 android:src="@drawable/ic_chart"
+
                 android:duplicateParentState="true" />
 
             <TextView
@@ -272,11 +187,10 @@
                 android:text="Analysis"
                 android:textStyle="bold"
                 android:textSize="12sp"
-                android:textColor="#C7D9E5"
+
                 android:duplicateParentState="true" />
         </LinearLayout>
 
-        <!-- Settings -->
         <LinearLayout
             android:id="@+id/settingsButton"
             android:layout_width="0dp"
@@ -284,6 +198,7 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center"
+
             android:clickable="true"
             android:focusable="true"
             android:duplicateParentState="true">
@@ -293,6 +208,7 @@
                 android:layout_width="34dp"
                 android:layout_height="34dp"
                 android:src="@drawable/ic_settings"
+
                 android:duplicateParentState="true" />
 
             <TextView
@@ -302,8 +218,9 @@
                 android:text="Settings"
                 android:textStyle="bold"
                 android:textSize="12sp"
-                android:textColor="#C7D9E5"
                 android:duplicateParentState="true" />
         </LinearLayout>
+
     </LinearLayout>
-</LinearLayout>
+
+</RelativeLayout>
